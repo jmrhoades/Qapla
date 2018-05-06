@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Qapla'!</title>    
+    <link href="index.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div id="midiInFeedback"><div class="bg"></div><div class="indicator"></div></div>
+	<div id="ccInFeedback"><div class="bg"></div><div class="indicator"></div><div class="nub"></div></div>
+	<div id="dotsContainer"></div>
+	<div id="connectionCircles">
+		<svg width="100%" height="100%" viewBox="0 0 100 100" id="connectionCirclesSVG">
+			<circle id="connectionCircle1" r=100 cx=50 cy=50 stroke="#07DE88" stroke-width="10"></circle>
+			<circle id="connectionCircle2" r=100 cx=50 cy=50 stroke="#07DE88" stroke-width="7"></circle>
+			<circle id="connectionCircle3" r=100 cx=50 cy=50 stroke="#07DE88" stroke-width="4"></circle>
+			<circle id="connectionCircle4" r=100 cx=50 cy=50 stroke="#07DE88" stroke-width="4"></circle>
+			<circle id="connectionCircle5" r=100 cx=50 cy=50 stroke="#07DE88" stroke-width="4"></circle>
+			<g id="waveylineGroup" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+				<polyline id="waveyline" stroke="#07DE88" stroke-width="5" stroke-linejoin="bevel" points="14 55.0408701 22.5137719 44.3696792 30.6940022 55.0408701 38.3138566 44.3696792 45.6726393 55.0408701 54.0712515 44.3696792 61.9990755 55.0408701 69.57625 44.3696792 77.428147 55.0408701 86 44.3696792"></polyline>
+			</g>
+		</svg>
+	</div>
+	<div id="serverAddressContainer" class="verticallyCenter">
+		<div id="hostnameDiv" class="bigtext typeon">
+			<span class="text-wrapper">
+				<span class="line line1"></span>
+				<span class="letters"></span>
+			</span>
+		</div>
+	</div>
+	<div id="serverAddressSmallContainer">ws://<span id="serverAddressSmall"></span>.local:3000</div>
+	<div id="messages-log"><div class="log"></div></div>
+	<div id="barIndicator"></div>
+	<script src="js/ArcView.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>

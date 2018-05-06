@@ -1,0 +1,233 @@
+
+body {
+	background-color: white;
+	color:#9B9B9B;
+	font-family: "SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
+html,body {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+}
+
+#serverAddressContainer {
+	padding: 0 0 0 24px;
+}
+
+#serverAddressContainer .l {
+	line-height: 3em;
+}
+
+#serverAddressSmallContainer {
+	position: absolute;
+	bottom: 20px;
+	left: 24px;
+	opacity: 0.75;
+}
+
+#wsLabel {
+	padding: 0;
+}
+
+#localLabel {
+	padding: 0 0 0 0;
+}
+
+#messages-log {
+	position: absolute;
+	top: 0;
+	right: 24px;
+	bottom: 0;
+	width: 150px;
+	font-size: 11px;
+	line-height: 1;
+	opacity: 0.33;
+	overflow-y: hidden;
+}
+
+.verticallyCenter {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(-10%);
+	text-align: left;
+}
+
+.bigtext {
+	font-size: 72px;
+	color: rgba(7, 222, 136, 1.0);
+	font-weight: 200;
+}
+
+#dotsContainer {
+	position: absolute;
+	width: 144px;
+	height: 90px;
+	top: 40px;
+	left: 300px;
+	transition: opacity 1s ease;
+}
+
+#waveylineGroup {
+	transform: translate(30px, 60px) rotate(-39deg);
+}
+
+#connectionCircles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+#midiInFeedback {
+	width: 186px;
+	height: 186px;
+	position: absolute;
+	left: 386px;
+	top: 80px;
+	opacity: 0;
+	transition: opacity 0.8s ease-in-out;
+}
+
+#midiInFeedback .bg,
+#midiInFeedback .indicator {
+	position: absolute;
+	width: 186px;
+	height: 186px;
+	border-radius: calc(186px/2);
+	transform-origin: center;
+	opacity: 1;
+	left: calc((186px - 186px) / 2);
+	top: calc((186px - 186px) / 2);
+	box-sizing: border-box;
+}
+
+#midiInFeedback .bg {
+	border: 4px solid #F3F3F3;
+}
+
+#midiInFeedback .indicator {
+	background: rgba(7, 222, 136, 1.0);
+	transform: scale(0);
+}
+
+#ccInFeedback {
+	width: 186px;
+	height: 186px;
+	position: absolute;
+	left: 126px;
+	top: 80px;
+	overflow: hidden;
+	opacity: 0;
+	transition: opacity 0.8s ease-in-out;
+}
+
+#ccInFeedback > div {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+#ccInFeedback .nub {
+	transform: rotate(30deg);
+}
+
+#ccInFeedback .nub::before {
+	content: '';
+	width: 14px;
+	height: 14px;
+	background-color: rgba(7, 222, 136, 1.0);
+	border-radius: 7px;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -7px;
+}
+
+#midiFeedback {
+	/*	transition: transform 0.1s ease-in-out; */
+	opacity: 1;
+}
+
+#connectionCircles circle {
+	opacity: 0;
+	fill: rgba(7, 222, 136, 0.0);
+	transform-origin: center;
+}
+
+/*#connectionCircles #connectionCircle1 {
+	fill: white;
+}*/
+
+#hostnameDiv {	
+	padding: 0;
+	position: relative;
+}
+
+.typeon .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.typeon .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 80%;
+  width: 2px;
+  background-color: rgba(7, 222, 136, 1.0);
+  background-color: #9B9B9B;
+  transform-origin: 0 50%;
+}
+
+.typeon .line1 { 
+  top: 10%; 
+  left: 0;
+}
+
+.typeon .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+
+#infoRow {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	font-size: 0.75em;
+	padding-bottom: 1.5em;
+	display: none;
+
+}
+
+#infoRow > div {
+	position: relative;
+	padding-left: 5.5em;
+}
+
+
+#barIndicator {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 3px;
+	background-color: rgba(7, 222, 136, 1.0);
+	/*background-color: #fff;*/
+	transform-origin: 0% 50%;
+	opacity: 0;
+}
+
+
